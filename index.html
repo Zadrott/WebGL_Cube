@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="us">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projet WebGL</title>
+    <link
+      rel="stylesheet"
+      href="https://zadrott.github.io/WebGL_Cube/index.css"
+    />
+  </head>
+  <body onload="main()">
+    <div class="container">
+      <div class="content">
+        <canvas id="dawin-webgl" width="800" height="800">
+          Utilisez un navigateur compatible avec WebGL
+        </canvas>
+      </div>
+
+      <div class="content setup">
+        <h2>Translation</h2>
+        <div class="slidecontainer">
+          tx:
+          <input
+            type="range"
+            min="-10"
+            max="10"
+            step="1"
+            value="0"
+            class="slider"
+            id="tx"
+            oninput="txChange(this.value)"
+          />
+        </div>
+        <div class="slidecontainer">
+          ty:
+          <input
+            type="range"
+            min="-10"
+            max="10"
+            value="0"
+            step="1"
+            class="slider"
+            id="ty"
+            oninput="tyChange(this.value)"
+          />
+        </div>
+        <div class="slidecontainer">
+          tz:
+          <input
+            type="range"
+            min="-10"
+            max="10"
+            value="0"
+            step="1"
+            class="slider"
+            id="tz"
+            oninput="tzChange(this.value)"
+          />
+        </div>
+        <h2>Rotation</h2>
+        <div class="slidecontainer">
+          rx:
+          <input
+            type="range"
+            min="-3.14159265358979"
+            max="3.14159265358979"
+            step="0.1"
+            value="0"
+            class="slider"
+            id="rx"
+            oninput="rxChange(this.value)"
+          />
+        </div>
+        <div class="slidecontainer">
+          ry:
+          <input
+            type="range"
+            min="-3.14159265358979"
+            max="3.14159265358979"
+            step="0.1"
+            value="0"
+            class="slider"
+            id="ry"
+            oninput="ryChange(this.value)"
+          />
+        </div>
+        <div class="slidecontainer">
+          rz:
+          <input
+            type="range"
+            min="-3.14159265358979"
+            max="3.14159265358979"
+            step="0.1"
+            value="0"
+            class="slider"
+            id="rz"
+            oninput="rzChange(this.value)"
+          />
+        </div>
+
+        <h2>Camera</h2>
+        <div class="slidecontainer">
+          zoom ?
+          <input
+            type="range"
+            min="0.1"
+            max="5"
+            value="0.9"
+            class="slider"
+            id="zoom"
+          />
+        </div>
+        <div class="slidecontainer">
+          perspective:
+          <input
+            type="range"
+            min="30"
+            max="120"
+            value="50"
+            step="10"
+            class="slider"
+            id="perspective"
+            oninput="fovyChange(this.value)"
+          />
+        </div>
+
+        <h2>Color ?</h2>
+      </div>
+    </div>
+
+    <script src="https://zadrott.github.io/WebGL_Cube/glmatrix.js"></script>
+    <script src="https://zadrott.github.io/WebGL_Cube/index.js"></script>
+  </body>
+</html>
